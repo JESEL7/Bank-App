@@ -1,0 +1,677 @@
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard-body {
+    min-height: 100vh;
+
+    background: #f5f7fb;
+
+    color: #1f2937;
+}
+
+
+/* =========================================
+   DASHBOARD NAVBAR
+========================================= */
+
+.dashboard-navbar {
+    width: 88%;
+
+    height: 80px;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+
+.dashboard-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+.dashboard-logo i {
+    color: #2563eb;
+
+    font-size: 25px;
+}
+
+
+.dashboard-nav-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.user-greeting {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #555;
+
+    font-size: 13px;
+}
+
+
+.user-greeting i {
+    color: #2563eb;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.logout-btn {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    background: #111827;
+
+    color: #fff;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+
+.logout-btn:hover {
+    background: #dc2626;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   DASHBOARD CONTAINER
+========================================= */
+
+.dashboard-container {
+    width: 88%;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 55px 0 80px;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.dashboard-welcome {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+
+.dashboard-label {
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.dashboard-welcome h1 {
+    font-size: 38px;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 8px;
+}
+
+
+.dashboard-welcome h1 span {
+    color: #2563eb;
+}
+
+
+.dashboard-welcome p:not(.dashboard-label) {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+.account-number-card {
+    padding: 20px 28px;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+
+    text-align: right;
+}
+
+
+.account-number-card span {
+    display: block;
+
+    color: #999;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 6px;
+}
+
+
+.account-number-card strong {
+    font-size: 17px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   BALANCE CARD
+========================================= */
+
+.balance-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 30px 35px;
+
+    margin-bottom: 35px;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    color: #fff;
+
+    box-shadow:
+        0 15px 35px rgba(37, 99, 235, 0.2);
+
+    overflow: hidden;
+}
+
+
+.balance-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    right: -70px;
+
+    top: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+.balance-icon {
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    font-size: 24px;
+}
+
+
+.balance-details {
+    flex: 1;
+}
+
+
+.balance-details p {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+
+    opacity: 0.8;
+}
+
+
+.balance-details h2 {
+    font-size: 35px;
+
+    letter-spacing: -1px;
+}
+
+
+.balance-status {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   TRANSACTION GRID
+========================================= */
+
+.transaction-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+}
+
+
+.transaction-card {
+    padding: 32px;
+
+    background: #fff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+
+.transaction-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.transaction-icon {
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 20px;
+}
+
+
+.transaction-heading h2 {
+    font-size: 20px;
+
+    margin-bottom: 4px;
+}
+
+
+.transaction-heading p {
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   DASHBOARD INPUTS
+========================================= */
+
+.dashboard-input-group {
+    margin-bottom: 18px;
+}
+
+
+.dashboard-input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #444;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+.dashboard-input-wrapper {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.dashboard-input-wrapper > i {
+    position: absolute;
+
+    left: 15px;
+
+    color: #999;
+
+    font-size: 13px;
+
+    pointer-events: none;
+}
+
+
+.dashboard-input-wrapper input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px 0 42px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    background: #fafafa;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+
+.dashboard-input-wrapper input:focus {
+    border-color: #2563eb;
+
+    background: #fff;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+.currency-symbol {
+    position: absolute;
+
+    left: 15px;
+
+    color: #777;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   TRANSACTION BUTTONS
+========================================= */
+
+.transaction-btn {
+    width: 100%;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 8px;
+
+    border-radius: 6px;
+
+    color: #fff;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+
+.deposit-btn {
+    background: #2563eb;
+}
+
+
+.withdraw-btn {
+    background: #111827;
+}
+
+
+.deposit-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+.withdraw-btn:hover {
+    background: #374151;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TRANSACTION MESSAGE
+========================================= */
+
+.transaction-message {
+    min-height: 18px;
+
+    margin-bottom: 5px;
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   TRANSACTION HISTORY
+========================================= */
+
+.history-section {
+    padding: 32px;
+
+    background: #fff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+}
+
+
+.history-header {
+    margin-bottom: 25px;
+}
+
+
+.history-header h2 {
+    font-size: 23px;
+}
+
+
+.transaction-history {
+    border-top: 1px solid #eee;
+}
+
+
+.history-empty {
+    padding: 40px;
+
+    text-align: center;
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+
+.history-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 17px 5px;
+
+    border-bottom: 1px solid #f0f0f0;
+}
+
+
+.history-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.history-icon {
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+
+.history-info strong {
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 3px;
+}
+
+
+.history-info span {
+    color: #999;
+
+    font-size: 10px;
+}
+
+
+.history-amount {
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.history-amount.deposit {
+    color: #16a34a;
+}
+
+
+.history-amount.withdraw {
+    color: #dc2626;
+}

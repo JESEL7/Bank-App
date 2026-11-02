@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Bank - Dashboard</title>
+
+    <!-- Google Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+    <link rel="icon" type="image/png" href="https://img.freepik.com/premium-vector/bank-icon-logo-vector-design-template_827767-1004.jpg?w=2000">
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+
+<body class="dashboard-body">
+
+
+    <!-- =========================================
+         DASHBOARD NAVBAR
+    ========================================== -->
+
+    <nav class="dashboard-navbar">
+
+        <div class="dashboard-logo">
+
+            <i class="fa-solid fa-building-columns"></i>
+
+            <span>My Bank</span>
+
+        </div>
+
+
+        <div class="dashboard-nav-right">
+
+            <div class="user-greeting">
+
+                <i class="fa-solid fa-circle-user"></i>
+
+                <span id="navbarUsername">
+                    User
+                </span>
+
+            </div>
+
+
+            <button
+                class="logout-btn"
+                id="logoutButton"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         DASHBOARD
+    ========================================== -->
+
+    <main class="dashboard-container">
+
+
+        <!-- =====================================
+             WELCOME
+        ====================================== -->
+
+        <section class="dashboard-welcome">
+
+            <div>
+
+                <p class="dashboard-label">
+                    MY BANK ACCOUNT
+                </p>
+
+                <h1>
+                    Welcome,
+                    <span id="welcomeUsername">
+                        User
+                    </span>
+                </h1>
+
+                <p>
+                    Manage your money easily and securely.
+                </p>
+
+            </div>
+
+
+            <div class="account-number-card">
+
+                <span>
+                    ACCOUNT NUMBER
+                </span>
+
+                <strong id="dashboardAccountNumber">
+                    --------
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             BALANCE
+        ====================================== -->
+
+        <section class="balance-card">
+
+            <div class="balance-icon">
+
+                <i class="fa-solid fa-wallet"></i>
+
+            </div>
+
+
+            <div class="balance-details">
+
+                <p>
+                    Available Balance
+                </p>
+
+                <h2>
+                    ₹<span id="balanceAmount">0.00</span>
+                </h2>
+
+            </div>
+
+
+            <div class="balance-status">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <span>
+                    Account Active
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             TRANSACTION SECTIONS
+        ====================================== -->
+
+        <section class="transaction-grid">
+
+
+            <!-- =================================
+                 DEPOSIT
+            ================================== -->
+
+            <div class="transaction-card deposit-card">
+
+                <div class="transaction-heading">
+
+                    <div class="transaction-icon">
+
+                        <i class="fa-solid fa-arrow-down"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Deposit Money
+                        </h2>
+
+                        <p>
+                            Add money to your account
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="depositForm">
+
+                    <div class="dashboard-input-group">
+
+                        <label for="depositAmount">
+                            Amount
+                        </label>
+
+                        <div class="dashboard-input-wrapper">
+
+                            <span class="currency-symbol">
+                                ₹
+                            </span>
+
+                            <input
+                                type="number"
+                                id="depositAmount"
+                                placeholder="Enter amount"
+                                min="1"
+                                step="0.01"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-input-group">
+
+                        <label for="depositAccountNumber">
+                            Account Number
+                        </label>
+
+                        <div class="dashboard-input-wrapper">
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                            <input
+                                type="text"
+                                id="depositAccountNumber"
+                                placeholder="Enter your account number"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        class="transaction-message"
+                        id="depositMessage"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="transaction-btn deposit-btn"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Deposit Money
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- =================================
+                 WITHDRAW
+            ================================== -->
+
+            <div class="transaction-card withdraw-card">
+
+                <div class="transaction-heading">
+
+                    <div class="transaction-icon">
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Withdraw Money
+                        </h2>
+
+                        <p>
+                            Take money from your account
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="withdrawForm">
+
+                    <div class="dashboard-input-group">
+
+                        <label for="withdrawAmount">
+                            Amount
+                        </label>
+
+                        <div class="dashboard-input-wrapper">
+
+                            <span class="currency-symbol">
+                                ₹
+                            </span>
+
+                            <input
+                                type="number"
+                                id="withdrawAmount"
+                                placeholder="Enter amount"
+                                min="1"
+                                step="0.01"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-input-group">
+
+                        <label for="withdrawAccountNumber">
+                            Account Number
+                        </label>
+
+                        <div class="dashboard-input-wrapper">
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                            <input
+                                type="text"
+                                id="withdrawAccountNumber"
+                                placeholder="Enter your account number"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        class="transaction-message"
+                        id="withdrawMessage"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="transaction-btn withdraw-btn"
+                    >
+
+                        <i class="fa-solid fa-minus"></i>
+
+                        Withdraw Money
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             TRANSACTION HISTORY
+        ====================================== -->
+
+        <section class="history-section">
+
+            <div class="history-header">
+
+                <div>
+
+                    <p class="dashboard-label">
+                        ACCOUNT ACTIVITY
+                    </p>
+
+                    <h2>
+                        Recent Transactions
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="transaction-history"
+                id="transactionHistory"
+            >
+
+                <!-- Transactions will be inserted by JS -->
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         DASHBOARD JAVASCRIPT
+    ========================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

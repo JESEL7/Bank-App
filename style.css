@@ -1,0 +1,1314 @@
+/* =========================================
+   RESET & GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #222;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+    background: #f7f9fc;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    height: 90px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo,
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+}
+
+.logo i,
+.footer-logo i {
+    font-size: 25px;
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.menu-btn {
+    display: none;
+
+    background: transparent;
+    font-size: 25px;
+    color: #222;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    min-height: calc(100vh - 90px);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+
+/* =========================================
+   HERO TEXT
+========================================= */
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.small-heading,
+.section-label {
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    font-size: clamp(60px, 7vw, 100px);
+    line-height: 0.95;
+
+    font-weight: 700;
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+.hero-text h1 span,
+.section-content h2 span,
+.section-heading h2 span,
+.cta-content h2 span {
+    color: #2563eb;
+}
+
+.hero-description {
+    max-width: 520px;
+
+    color: #666;
+    font-size: 14px;
+    line-height: 1.9;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.start-btn,
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 25px;
+
+    color: #fff;
+    background: #2563eb;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.start-btn:hover,
+.cta-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.start-btn i,
+.cta-btn i {
+    transition: transform 0.3s ease;
+}
+
+.start-btn:hover i,
+.cta-btn:hover i {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   HERO IMAGES
+========================================= */
+
+.hero-image {
+    position: relative;
+
+    height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-card {
+    position: absolute;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.image-card img {
+    height: 100%;
+}
+
+.card-one {
+    width: 330px;
+    height: 450px;
+
+    right: 100px;
+    top: 50px;
+
+    transform: rotate(5deg);
+}
+
+.card-two {
+    width: 280px;
+    height: 370px;
+
+    left: 40px;
+    bottom: 55px;
+
+    transform: rotate(-7deg);
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   FLOATING CARD
+========================================= */
+
+.floating-card {
+    position: absolute;
+
+    right: 20px;
+    bottom: 60px;
+
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 20px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 10px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+.floating-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+.floating-card strong {
+    display: block;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.floating-card p {
+    margin-top: 2px;
+
+    color: #888;
+    font-size: 10px;
+}
+
+@keyframes floating {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================
+   PAYMENTS SECTION
+========================================= */
+
+.payments-section {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 130px auto;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    align-items: center;
+    gap: 100px;
+}
+
+
+/* =========================================
+   SECTION IMAGE
+========================================= */
+
+.section-image {
+    position: relative;
+
+    height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+.section-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        rgba(37, 99, 235, 0.05),
+        rgba(0, 0, 0, 0.15)
+    );
+}
+
+.section-image img {
+    height: 100%;
+}
+
+
+/* =========================================
+   SECTION CONTENT
+========================================= */
+
+.section-content h2,
+.section-heading h2,
+.cta-content h2 {
+    font-size: clamp(38px, 4vw, 55px);
+
+    line-height: 1.15;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
+
+.section-content > p:not(.section-label) {
+    color: #777;
+
+    font-size: 14px;
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   PAYMENT METHODS
+========================================= */
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px;
+
+    background: #f7f9fc;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.payment-item i {
+    color: #2563eb;
+}
+
+.payment-item:hover {
+    background: #eff6ff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services-section {
+    background: #f7f9fc;
+
+    padding: 120px 5%;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.service-container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    padding: 40px 30px;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 22px;
+}
+
+.service-card h3 {
+    font-size: 18px;
+
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #777;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.cta-section {
+    padding: 120px 5%;
+
+    background: #2563eb;
+
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.cta-content .section-label {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.cta-content h2 {
+    color: #fff;
+}
+
+.cta-content h2 span {
+    color: #dbeafe;
+}
+
+.cta-content > p:not(.section-label) {
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background: #fff;
+    color: #2563eb;
+}
+
+.cta-btn:hover {
+    background: #f8fafc;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #111827;
+    color: #fff;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 80px 0;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.4fr;
+
+    gap: 50px;
+}
+
+.footer-logo {
+    color: #fff;
+
+    margin-bottom: 20px;
+}
+
+.footer-about > p {
+    max-width: 330px;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FOOTER COLUMNS
+========================================= */
+
+.footer-column h3 {
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 12px;
+}
+
+.footer-column li a {
+    color: #9ca3af;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+.footer-column li a:hover {
+    color: #fff;
+}
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.social-icons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #1f2937;
+
+    color: #fff;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #2563eb;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-info p {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+
+    line-height: 1.5;
+}
+
+.contact-info i {
+    width: 15px;
+
+    color: #fff;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+    padding: 20px 5%;
+
+    border-top: 1px solid #1f2937;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #6b7280;
+
+    font-size: 11px;
+}
+
+.footer-bottom strong {
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   SCROLL ANIMATION
+========================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        height: 500px;
+
+        margin-top: 20px;
+    }
+
+    .payments-section {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        margin: 90px auto;
+    }
+
+    .section-image {
+        height: 450px;
+
+        max-width: 600px;
+
+        margin: auto;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: 75px;
+    }
+
+    .nav-links {
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background: #fff;
+
+        display: none;
+        flex-direction: column;
+
+        gap: 20px;
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero-content {
+        min-height: auto;
+
+        padding-top: 80px;
+    }
+
+    .hero-text h1 {
+        font-size: 65px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-image {
+        height: 420px;
+    }
+
+    .card-one {
+        width: 230px;
+        height: 320px;
+
+        right: 40px;
+        top: 30px;
+    }
+
+    .card-two {
+        width: 200px;
+        height: 280px;
+
+        left: 25px;
+        bottom: 30px;
+    }
+
+    .floating-card {
+        right: 0;
+        bottom: 25px;
+
+        padding: 10px 14px;
+    }
+
+    .floating-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .payments-section {
+        margin: 70px auto;
+    }
+
+    .section-image {
+        height: 350px;
+    }
+
+    .section-content h2,
+    .section-heading h2,
+    .cta-content h2 {
+        font-size: 40px;
+    }
+
+    .payment-methods {
+        grid-template-columns: 1fr;
+    }
+
+    .services-section {
+        padding: 80px 5%;
+    }
+
+    .cta-section {
+        padding: 90px 5%;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 60px 0;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .hero-text h1 {
+        font-size: 55px;
+    }
+
+    .hero-image {
+        height: 360px;
+    }
+
+    .card-one {
+        width: 190px;
+        height: 270px;
+
+        right: 25px;
+    }
+
+    .card-two {
+        width: 165px;
+        height: 230px;
+
+        left: 10px;
+    }
+
+    .floating-card {
+        transform: scale(0.85);
+        transform-origin: right bottom;
+    }
+
+    .section-content h2,
+    .section-heading h2,
+    .cta-content h2 {
+        font-size: 34px;
+    }
+}
+
+/* =========================================
+   AUTHENTICATION PAGES
+========================================= */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    background: #f7f9fc;
+}
+
+.auth-page.active {
+    display: flex;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 45px;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+
+/* =========================================
+   AUTH LOGO
+========================================= */
+
+.auth-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.auth-logo i {
+    color: #2563eb;
+    font-size: 26px;
+}
+
+
+/* =========================================
+   AUTH HEADINGS
+========================================= */
+
+.auth-container h2 {
+    font-size: 32px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 8px;
+}
+
+.auth-subtitle {
+    color: #888;
+
+    font-size: 13px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   INPUT GROUP
+========================================= */
+
+.input-group {
+    text-align: left;
+
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #333;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.input-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper > i {
+    position: absolute;
+
+    left: 15px;
+
+    color: #999;
+
+    font-size: 14px;
+
+    pointer-events: none;
+}
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 45px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #fafafa;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.input-wrapper input:focus {
+    border-color: #2563eb;
+
+    background: #fff;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================
+   PASSWORD TOGGLE
+========================================= */
+
+.password-toggle {
+    position: absolute;
+
+    right: 15px;
+
+    background: transparent;
+
+    color: #999;
+
+    font-size: 14px;
+}
+
+.password-toggle:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================
+   AUTH BUTTON
+========================================= */
+
+.auth-btn {
+    width: 100%;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.auth-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.2);
+}
+
+
+/* =========================================
+   AUTH MESSAGE
+========================================= */
+
+.auth-message {
+    min-height: 20px;
+
+    margin-bottom: 5px;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+    color: #aaa;
+
+    font-size: 11px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background: #e5e7eb;
+}
+
+
+/* =========================================
+   CREATE ACCOUNT / LOGIN LINK
+========================================= */
+
+.create-account-text,
+.login-account-text {
+    color: #777;
+
+    font-size: 12px;
+}
+
+.create-account-text button,
+.login-account-text button {
+    background: transparent;
+
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.create-account-text button:hover,
+.login-account-text button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   BACK HOME
+========================================= */
+
+.back-home-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+    background: transparent;
+
+    color: #777;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+.back-home-btn:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================
+   MOBILE AUTH
+========================================= */
+
+@media (max-width: 500px) {
+
+    .auth-page {
+        padding: 25px 15px;
+    }
+
+    .auth-container {
+        padding: 35px 25px;
+    }
+
+    .auth-container h2 {
+        font-size: 27px;
+    }
+}
